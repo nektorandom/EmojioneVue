@@ -1,6 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" class="rn-main__wrapper">
+    <h1>Example emoji textarea</h1>
+    
+    <div class="rn-padding-sm rn-with-1-2">
       <emoji-area></emoji-area>
+    </div>
   </div>
 </template>
 
@@ -15,13 +19,10 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css?family=Unica+One'); // TODO::
+
+  @import '@/assets/scss/parts/_common.scss';
+  @import '@/assets/scss/parts/_btn.scss';
+  @import '@/assets/scss/parts/_textarea.scss';
 </style>

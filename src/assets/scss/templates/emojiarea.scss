@@ -1,0 +1,51 @@
+.rn-textare__wrapper {
+
+    textarea {
+        display: none;
+    }
+}
+
+.rn-textare-inner__wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.rn-textare-editor {
+    display: block;
+    height: auto;
+    min-height: 8em;
+    max-height: 15rm;
+    overflow: auto;
+    padding: 6px 24px 6px 12px;
+    color: #555;
+    border: 0;
+    cursor: text;
+    margin-right: 1px;
+    background-color: transparent;
+    line-height: 1.4;
+}
+
+.emojiarea-btn__wrapper {
+    position: absolute;
+    z-index: 5;
+    right: 3px;
+    top: 3px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+}
+
+.emojiarea-btn {
+    content: "f580";
+}
+
+.fa-grin {
+    //color: #fff;
+  }
