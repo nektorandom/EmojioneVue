@@ -2,7 +2,7 @@
   <div id="app" class="rn-main__wrapper">
     <h1>Example emoji textarea</h1>
     
-    <div class="rn-padding-sm rn-with-1-2">
+    <div class="rn-padding-sm rn-with-1-2 rn-margin-top">
       <emoji-area></emoji-area>
     </div>
   </div>

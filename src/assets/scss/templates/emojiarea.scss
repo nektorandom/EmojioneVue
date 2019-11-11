@@ -30,16 +30,47 @@
     line-height: 1.4;
 }
 
+.emojiarea__wrapper *, .emojiarea* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.emojiarea__wrapper {
+
+    &.active {
+
+        .emojionearea-picker-position-top {
+            margin-top: -269px;
+
+            .emojiarea-picker {
+
+                &::after {
+                    width: 19px;
+                    height: 10px;
+                    background-position: -2px -49px;
+                    bottom: -10px;
+                    right: 20px;
+                }
+            }
+        }
+    }
+}
+
 .emojiarea-btn__wrapper {
     position: absolute;
     z-index: 5;
-    right: 3px;
-    top: 3px;
+    right: 5px;
+    top: 8px;
     width: 24px;
     height: 24px;
     opacity: 0.6;
     cursor: pointer;
     transition: opacity .3s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .emojiarea-btn {
@@ -49,3 +80,162 @@
 .fa-grin {
     //color: #fff;
   }
+
+.emojiarea-picker__wrapper {
+    background: #FFFFFF;
+    position: absolute;
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.32);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    height: 276px;
+    width: 316px;
+    top: -15px;
+    right: -15px;
+    z-index: 90;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    //opacity: 0;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.emojiarea-picker {
+    position: relative;
+    height: 276px;
+    width: 316px;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        z-index: 91;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAABuCAYAAADMB4ipAAAHfElEQ…ODFRk6OfrL/hj67GnckaHPng7vjaGzyYmaGDr77KktQ38H8tqx8Wja+WIAAAAASUVORK5CYII=) !important;
+    }
+}
+
+.emojiarea-filters {
+    top: 0;
+    border-top-right-radius: 5px;
+
+    background: #F5F7F9;
+    padding: 0 0 0 7px;
+    height: 40px;
+
+    width: 100%;
+    position: absolute;
+    z-index: 95;
+    box-sizing: border-box;
+}
+
+.emojiarea-filter {
+    display: block;
+    float: left;
+    height: 40px;
+    width: 32px;
+    padding: 7px 1px 0;
+    cursor: pointer;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    box-sizing: border-box;
+}
+
+.emojiarea-filter-recent {
+
+}
+
+.emojioneemoji {
+    width: 24px;
+    height: 24px;
+    margin: 0 3px;
+}
+
+.emojiarea-scroll-area {
+    bottom: 0;
+    height: 206px;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
+    position: absolute;
+    padding: 0 0 5px;
+}
+
+.emojiarea-search-panel {
+    height: 30px;
+    position: absolute;
+    z-index: 95;
+    top: 40px;
+    left: 0;
+    right: 0;
+    padding: 5px 0 5px 8px;
+}
+
+.emojiarea-search {
+    float: left;
+    padding: 0;
+    height: 20px;
+    width: 160px;
+    box-sizing: border-box;
+
+    input {
+        outline: none;
+        width: 160px;
+        min-width: 160px;
+        height: 20px;
+        box-sizing: border-box;
+    }
+}
+
+.emojiarea-tones {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-top: -1px;
+
+    padding: 0;
+    width: 120px;
+    height: 20px;
+}
+
+.btn-tone {
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    vertical-align: middle;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    border-radius: 100%;
+}
+
+.btn-tone-0 {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-color: #ffcf3e;
+    }
+}
